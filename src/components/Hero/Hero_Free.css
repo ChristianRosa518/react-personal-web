@@ -1,0 +1,131 @@
+.step {
+  position: relative;
+  height: 15%;
+  width: 100%;
+  z-index: 1;
+  /* background-color: grey; */
+}
+.initialStep {
+  transition: background-color 4s;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  pointer-events: all;
+  z-index: 1;
+  background-color: #161616;
+}
+
+.firstStep {
+  transition: background-color 4s;
+  right: 0;
+  background-color: #1f1f1f;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  pointer-events: all;
+}
+.secondStep {
+  pointer-events: all;
+  transition: background-color 4s;
+  background-color: #282828;
+  right: 0;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+}
+.thirdStep {
+  pointer-events: all;
+  transition: background-color 4s;
+  background-color: #313131;
+  right: 0;
+  height: 100%;
+  position: absolute;
+  z-index: 4;
+}
+.fourthStep {
+  transition: background-color 4s;
+  background-color: #3a3a3a;
+  right: 0;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+}
+.fifthStep {
+  transition: background-color 4s;
+  background-color: #444444;
+  right: 0;
+  height: 100%;
+  position: absolute;
+  z-index: 6;
+}
+.sixthStep {
+  transition: background-color 4s;
+  background-color: #4e4e4e;
+  right: 0;
+  height: 100%;
+  position: absolute;
+  z-index: 7;
+}
+
+.initialStep:hover {
+  background-color: rgb(45, 45, 255);
+  transition: background-color 0.1s;
+}
+
+.firstStep:hover {
+  background-color: rgb(0, 255, 0);
+  transition: background-color 0.1s;
+}
+
+.secondStep:hover {
+  background-color: rgb(235, 235, 0);
+  transition: background-color 0.1s;
+}
+.thirdStep:hover {
+  background-color: orangered;
+  transition: background-color 0.1s;
+}
+.fourthStep:hover {
+  background-color: red;
+  transition: background-color 0.1s;
+}
+.fifthStep:hover {
+  background-color: violet;
+  transition: background-color 0.1s;
+}
+.sixthStep:hover {
+  background-color: purple;
+  transition: background-color 0.1s;
+}
+
+.initialStepLock {
+  background-color: rgb(45, 45, 255);
+  transition: background-color 0.1s;
+}
+
+.firstStepLock {
+  background-color: rgb(0, 255, 0);
+  transition: background-color 0.1s;
+}
+
+.secondStepLock {
+  background-color: rgb(235, 235, 0);
+  transition: background-color 0.1s;
+}
+.thirdStepLock {
+  background-color: orangered;
+  transition: background-color 0.1s;
+}
+.fourthStepLock {
+  background-color: red;
+  transition: background-color 0.1s;
+}
+.fifthStepLock {
+  background-color: violet;
+  transition: background-color 0.1s;
+}
+.sixthStepLock {
+  background-color: purple;
+  transition: background-color 0.1s;
+}
