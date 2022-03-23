@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-personal-web/static/css/main.54f0ea76.css",
+    "main.js": "/react-personal-web/static/js/main.ffe21073.js",
+    "static/media/20220322_234906078_iOS.jpg": "/react-personal-web/static/media/20220322_234906078_iOS.725d9eec4f544eb53a90.jpg",
+    "index.html": "/react-personal-web/index.html",
+    "main.54f0ea76.css.map": "/react-personal-web/static/css/main.54f0ea76.css.map",
+    "main.ffe21073.js.map": "/react-personal-web/static/js/main.ffe21073.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54f0ea76.css",
+    "static/js/main.ffe21073.js"
+  ]
+}
