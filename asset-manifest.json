@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-personal-web/static/css/main.0ab5c492.css",
+    "main.css": "/react-personal-web/static/css/main.aee3b50a.css",
     "main.js": "/react-personal-web/static/js/main.76271791.js",
     "static/media/20220322_234906078_iOS.jpg": "/react-personal-web/static/media/20220322_234906078_iOS.725d9eec4f544eb53a90.jpg",
     "index.html": "/react-personal-web/index.html",
-    "main.0ab5c492.css.map": "/react-personal-web/static/css/main.0ab5c492.css.map",
+    "main.aee3b50a.css.map": "/react-personal-web/static/css/main.aee3b50a.css.map",
     "main.76271791.js.map": "/react-personal-web/static/js/main.76271791.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ab5c492.css",
+    "static/css/main.aee3b50a.css",
     "static/js/main.76271791.js"
   ]
 }
