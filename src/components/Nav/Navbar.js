@@ -11,15 +11,26 @@ function Navbar() {
   const animateFrom = { opacity: 0, y: -40 };
   const animateTo = { opacity: 1, y: 0 };
 
+  // If website was vertical
   window.addEventListener("scroll", () => {
     var current = document.documentElement.scrollTop;
     var maxHeight = document.body.scrollHeight;
     if (current > maxHeight * 0.05) {
-      setNavColor(true);
+      setNavColor(false);
+      // Set true
     } else {
       setNavColor(false);
     }
   });
+
+  //
+  function appHeight() {
+    const doc = document.documentElement;
+    doc.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+  }
+
+  window.addEventListener("resize", appHeight);
+  appHeight();
 
   return (
     <nav className={`Navbar ${navColor ? "NavbarColor" : ""}`}>
@@ -54,7 +65,7 @@ function Navbar() {
           <motion.ul
             key={"Dropdown"}
             initial={{ height: 0 }}
-            animate={{ height: "100vh" }}
+            animate={{ height: "calc(var(--vh, 1vh) * 100)" }}
             transition={{ duration: 0.5 }}
             exit={{ height: "0vh", transition: { duration: 0.5 } }}
           >
@@ -76,9 +87,7 @@ function Navbar() {
               transition={{ delay: 0.2 }}
               exit={{ opacity: 0, y: -40, transition: { delay: 0 } }}
             >
-              <a href="#about" className={"navItem"}>
-                About
-              </a>
+              <a href="#about">About</a>
             </motion.li>
             <motion.li
               key={"List3"}
@@ -98,19 +107,8 @@ function Navbar() {
               transition={{ delay: 0.3 }}
               exit={{ opacity: 0, y: -40, transition: { delay: 0 } }}
             >
-              <a href="home" className={"navItem"}>
+              <a href="#home" className={"navItem"}>
                 Contact
-              </a>
-            </motion.li>
-            <motion.li
-              key={"List5"}
-              initial={animateFrom}
-              animate={animateTo}
-              transition={{ delay: 0.35 }}
-              exit={{ opacity: 0, y: -40, transition: { delay: 0.0 } }}
-            >
-              <a href="home" className={"navItem"}>
-                Resume
               </a>
             </motion.li>
           </motion.ul>

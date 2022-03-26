@@ -100,7 +100,7 @@
 }
 
 .logo:hover {
-  color: black;
+  color: rgba(255, 130, 88, 1);
   transition: 0.4s;
 }
 

@@ -1,35 +1,99 @@
-.testArea {
-  top: 0;
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  z-index: 20;
-  pointer-events: none;
-}
-
-.swiper-button-prev::after {
-  color: white;
-  pointer-events: all;
-}
-.swiper-button-next::after {
-  color: white;
-  pointer-events: all;
-}
-
-.trollImage {
-  height: 80%;
-  width: 29.3%;
-  background-color: yellow;
-  background-image: url(../Carousel/20220322_234906078_iOS.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 .container {
   height: 100vh;
+
   width: 100%;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.carousel {
+  pointer-events: none;
+  top: 0;
+  position: absolute;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  z-index: 20;
+  overflow: hidden;
+  /* background-color: blue; */
+}
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.carousel-item {
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  color: #fff;
+  z-index: 21;
+  /* background-color: green; */
+}
+
+.indicators {
+  pointer-events: all;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.indicators > button {
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding-top: 8px;
+  padding: 0px 12px;
+  font-size: calc(0.75em + 2vmin);
+  font-family: "Shrikhand", cursive;
+  font-style: normal;
+  text-shadow: 2px 3px black;
+  border-bottom: 2px solid transparent;
+}
+
+@media screen and (max-device-width: 700px) {
+  .indicators > button {
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0px 5px;
+    font-size: calc(0.75em + 1.5vmin);
+  }
+
+  .arrows {
+    display: none;
+  }
+}
+
+.indicators > button.active {
+  color: rgba(255, 130, 88, 1);
+  border-bottom: 2px solid rgba(255, 130, 88, 1);
+}
+
+.arrows {
+  transition: 0.3s;
+  padding: 0px 10px;
+}
+.arrows:hover {
+  transition: 0.3s;
+  color: rgba(255, 130, 88, 1);
+}
+
+.flip {
+  transform: rotate(180deg);
+  text-shadow: 2px -3px black !important;
 }

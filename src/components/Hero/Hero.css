@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  position: relative;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  /* border-bottom: 3vh solid white; */
+}
+
+.absolute {
+  z-index: 0;
+  top: 0;
+  position: absolute;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleContainer {
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 20;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  pointer-events: none;
+}
+
+.title {
+  white-space: normal;
+  width: 100%;
+  font-family: "Shrikhand", cursive;
+  font-style: normal;
+  color: white;
+  padding-left: 8%;
+  font-size: calc(0.75em + 9vmin);
+  line-height: 90%;
+  z-index: 20;
+  text-align: left;
+  text-shadow: 2px 3px black;
+}
+.titlebot {
+  white-space: normal;
+  text-shadow: 2px 3px black;
+  width: 100%;
+  font-family: "Shrikhand", cursive;
+  font-style: normal;
+  padding-left: 8%;
+  color: white;
+
+  font-size: calc(0.75em + 9vmin);
+  line-height: 90%;
+  z-index: 20;
+}
+/*  */
+
+.aboutContainer {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  z-index: 21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutImage {
+  height: 70%;
+  width: 30%;
+  background-color: beige;
+}
+.aboutDescription {
+  height: 50%;
+  width: 30%;
+  background-color: rgba(255, 130, 88, 1);
+}
+
+@media screen and (max-device-width: 700px) {
+  .title {
+    left: 8%;
+    top: 38%;
+    font-size: calc(0.75em + 8vmin);
+    line-height: 100%;
+    z-index: 20;
+  }
+  .titlebot {
+    left: 8%;
+    top: 51%;
+    font-size: calc(0.75em + 8vmin);
+    line-height: 100%;
+    z-index: 20;
+  }
+  .aboutContainer {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .aboutImage {
+    height: 30%;
+    width: 60%;
+    background-color: beige;
+  }
+
+  .aboutDescription {
+    height: 50%;
+    width: 90%;
+    background-color: rgba(255, 130, 88, 1);
+  }
+}
