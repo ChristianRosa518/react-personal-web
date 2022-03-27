@@ -1,13 +1,31 @@
 {
   "files": {
-    "main.css": "/react-personal-web/static/css/main.cb3fc68c.css",
-    "main.js": "/react-personal-web/static/js/main.fdfa2fe9.js",
+    "main.css": "/react-personal-web/static/css/main.91cbb071.css",
+    "main.js": "/react-personal-web/static/js/main.4562ccbe.js",
+    "static/media/image14.PNG": "/react-personal-web/static/media/image14.cab4279ed032a5e91353.PNG",
+    "static/media/image10.PNG": "/react-personal-web/static/media/image10.d6325c861e55c64f07f3.PNG",
+    "static/media/image15.PNG": "/react-personal-web/static/media/image15.001b975e4a74f4f4fb27.PNG",
+    "static/media/image6.jpg": "/react-personal-web/static/media/image6.479c1d80ea8e5cfa59e1.jpg",
+    "static/media/image8.JPG": "/react-personal-web/static/media/image8.2d37ea66821af785735e.JPG",
+    "static/media/image1.PNG": "/react-personal-web/static/media/image1.f4a33346013eee5e7cb6.PNG",
+    "static/media/image4.jpg": "/react-personal-web/static/media/image4.9f24d1966b8c5bd16cf6.jpg",
+    "static/media/image16.jpg": "/react-personal-web/static/media/image16.fd9e0c4452b6f8de1a43.jpg",
+    "static/media/imagr17.jpg": "/react-personal-web/static/media/imagr17.2e6b950b970e2d61e236.jpg",
+    "static/media/image2.JPG": "/react-personal-web/static/media/image2.664ae21cd5e4e82e8eab.JPG",
+    "static/media/image12.jpg": "/react-personal-web/static/media/image12.538c08d7e4e47ef60619.jpg",
+    "static/media/image9.JPG": "/react-personal-web/static/media/image9.9e5a4d03b5a115de0f88.JPG",
+    "static/media/image11.JPG": "/react-personal-web/static/media/image11.88518809325c159cf123.JPG",
+    "static/media/image18.jpg": "/react-personal-web/static/media/image18.809b700cd8675efe68d0.jpg",
+    "static/media/image5.JPG": "/react-personal-web/static/media/image5.00bc1d91eb332f1c1681.JPG",
+    "static/media/image7.JPG": "/react-personal-web/static/media/image7.d77e109f9a350e0ec1ad.JPG",
+    "static/media/image3.JPG": "/react-personal-web/static/media/image3.aaaf763ffa755f917f93.JPG",
+    "static/media/image13.jpg": "/react-personal-web/static/media/image13.08af0d237c9072a705fa.jpg",
     "index.html": "/react-personal-web/index.html",
-    "main.cb3fc68c.css.map": "/react-personal-web/static/css/main.cb3fc68c.css.map",
-    "main.fdfa2fe9.js.map": "/react-personal-web/static/js/main.fdfa2fe9.js.map"
+    "main.91cbb071.css.map": "/react-personal-web/static/css/main.91cbb071.css.map",
+    "main.4562ccbe.js.map": "/react-personal-web/static/js/main.4562ccbe.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb3fc68c.css",
-    "static/js/main.fdfa2fe9.js"
+    "static/css/main.91cbb071.css",
+    "static/js/main.4562ccbe.js"
   ]
 }
