@@ -1,0 +1,146 @@
+.aboutContainer {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  z-index: 21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutImage {
+  overflow: hidden;
+  pointer-events: all;
+  height: 70%;
+  width: 30%;
+}
+.aboutDescription {
+  height: 70%;
+  width: 30%;
+  background-color: rgba(255, 130, 88, 1);
+}
+
+.imageCarousel {
+  position: relative;
+  color: black;
+  pointer-events: all;
+  height: 100%;
+  width: 100%;
+}
+
+.image-carousel-item {
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: black;
+  z-index: 21;
+  vertical-align: top;
+  /* background-color: green; */
+}
+
+.imageIndicators {
+  pointer-events: all;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageIndicators > button {
+  color: rgba(255, 130, 88, 1);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding-top: 8px;
+  padding: 0px 12px;
+  font-size: calc(0.75em + 1vmin);
+  font-family: "Shrikhand", cursive;
+  font-style: normal;
+  border-bottom: 2px solid transparent;
+}
+
+.imageArrows {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.text {
+  font-size: calc(0.75em + 1vmin);
+  font-family: "Shrikhand", cursive;
+  font-style: normal;
+  color: white;
+}
+
+.imageFill {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.imageCover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.imageDown {
+  object-position: 0% -20%;
+}
+
+.noOverflow {
+  overflow: hidden;
+}
+
+@media screen and (max-device-width: 700px) {
+  .aboutContainer {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .aboutImage {
+    height: 40%;
+    width: 70%;
+  }
+
+  .aboutDescription {
+    height: 40%;
+    width: 90%;
+    background-color: rgba(255, 130, 88, 1);
+  }
+  .image-carousel-item {
+    vertical-align: bottom;
+  }
+
+  .imageArrows {
+    border: solid transparent;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+}

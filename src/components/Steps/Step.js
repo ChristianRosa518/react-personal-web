@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "../Hero/Hero_Free.css";
+import "./Steps.css";
 
 export default class Step extends React.Component {
   constructor(props) {

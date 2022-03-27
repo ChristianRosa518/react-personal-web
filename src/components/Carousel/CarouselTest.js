@@ -22,14 +22,17 @@ const CarouselContainer = ({ children }) => {
     setActiveIndex(newIndex);
   };
 
-  const handlers = useSwipeable({
-    // unable to use until fix pointer events to go through elements
-    onSwipedLeft: () => updateIndex(activeIndex + 1),
-    onSwipedRight: () => updateIndex(activeIndex - 1),
-  });
+  // const handlers = useSwipeable({
+  //   // unable to use until fix pointer events to go through elements
+  //   onSwipedLeft: () => updateIndex(activeIndex + 1),
+  //   onSwipedRight: () => updateIndex(activeIndex - 1),
+  // });
 
   return (
-    <div {...handlers} className={"carousel"}>
+    <div
+      // {...handlers}
+      className={"carousel"}
+    >
       <div
         className={"inner"}
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}

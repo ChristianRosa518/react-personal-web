@@ -1,8 +1,32 @@
 import React, { useState } from "react";
-import "./Hero.css";
 import { motion, AnimatePresence } from "framer-motion";
+
+import "./Title.css";
+import "./About.css";
+
 import Step from "../Steps/Step";
+import ImageCarousel, { CarouselChild } from "../Carousel/ImageCarousel";
 import CarouselContainer, { CarouselTest } from "../Carousel/CarouselTest";
+
+// Images
+import image1 from "../images/CarouselImages/image1.PNG";
+import image2 from "../images/CarouselImages/image2.JPG";
+import image3 from "../images/CarouselImages/image3.JPG";
+import image4 from "../images/CarouselImages/image4.jpg";
+import image5 from "../images/CarouselImages/image5.JPG";
+import image6 from "../images/CarouselImages/image6.jpg";
+import image7 from "../images/CarouselImages/image7.JPG";
+import image8 from "../images/CarouselImages/image8.JPG";
+import image9 from "../images/CarouselImages/image9.JPG";
+import image10 from "../images/CarouselImages/image10.PNG";
+import image11 from "../images/CarouselImages/image11.JPG";
+import image12 from "../images/CarouselImages/image12.jpg";
+import image13 from "../images/CarouselImages/image13.jpg";
+import image15 from "../images/CarouselImages/image15.PNG";
+import image16 from "../images/CarouselImages/image16.jpg";
+import image17 from "../images/CarouselImages/imagr17.jpg";
+import image18 from "../images/CarouselImages/image18.jpg";
+// Images Done
 
 function Hero() {
   const [intro, setIntro] = useState(true);
@@ -79,18 +103,109 @@ function Hero() {
           </div>
         </CarouselTest>
         <CarouselTest>
-          <div className={"titleContainer"}>
+          <div className={"slideContainer"}>
             <div className={"aboutContainer"}>
-              <div className={"aboutImage"}></div>
+              <div className={"aboutImage"}>
+                <ImageCarousel>
+                  <CarouselChild>
+                    <img
+                      className={"noOverflow imageFill"}
+                      src={image1}
+                      alt="selfie1"
+                    />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img className={"noOverflow "} src={image2} alt="selfie1" />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img className={"noOverflow"} src={image3} alt="selfie1" />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img className={"noOverflow "} src={image6} alt="selfie1" />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img className={"noOverflow"} src={image4} alt="selfie1" />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img className={"noOverflow"} src={image7} alt="selfie1" />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img
+                      className={"noOverflow imageCover"}
+                      src={image5}
+                      alt="selfie1"
+                    />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img
+                      className={"noOverflow imageDown"}
+                      src={image8}
+                      alt="selfie1"
+                    />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img
+                      className={"noOverflow imageDown"}
+                      src={image9}
+                      alt="selfie1"
+                    />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img
+                      className={"noOverflow imageCover"}
+                      src={image13}
+                      alt="selfie1"
+                    />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img className={"noOverflow"} src={image10} alt="selfie1" />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img
+                      className={"noOverflow "}
+                      src={image11}
+                      alt="selfie1"
+                    />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img
+                      className={"noOverflow imageCover "}
+                      src={image12}
+                      alt="selfie1"
+                    />
+                  </CarouselChild>
+
+                  <CarouselChild>
+                    <img className={"noOverflow"} src={image15} alt="selfie1" />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img
+                      className={"noOverflow "}
+                      src={image16}
+                      alt="selfie1"
+                    />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img
+                      className={"noOverflow imageCover"}
+                      src={image17}
+                      alt="selfie1"
+                    />
+                  </CarouselChild>
+                  <CarouselChild>
+                    <img className={"noOverflow"} src={image18} alt="selfie1" />
+                  </CarouselChild>
+                </ImageCarousel>
+              </div>
               <div className={"aboutDescription"}></div>
             </div>
           </div>
         </CarouselTest>
         <CarouselTest>
-          <div className={"titleContainer"}>b</div>
+          <div className={"slideContainer"}>b</div>
         </CarouselTest>
         <CarouselTest>
-          <div className={"titleContainer"}>c</div>
+          <div className={"slideContainer"}>c</div>
         </CarouselTest>
       </CarouselContainer>
       {/* <Carous /> */}
