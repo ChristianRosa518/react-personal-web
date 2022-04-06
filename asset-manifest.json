@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-personal-web/static/css/main.ec16c228.css",
-    "main.js": "/react-personal-web/static/js/main.5287f16e.js",
+    "main.css": "/react-personal-web/static/css/main.427de47b.css",
+    "main.js": "/react-personal-web/static/js/main.19de2876.js",
     "static/media/image10.PNG": "/react-personal-web/static/media/image10.d6325c861e55c64f07f3.PNG",
     "static/media/image15.PNG": "/react-personal-web/static/media/image15.001b975e4a74f4f4fb27.PNG",
     "static/media/image6.jpg": "/react-personal-web/static/media/image6.479c1d80ea8e5cfa59e1.jpg",
@@ -22,11 +22,11 @@
     "static/media/image3.JPG": "/react-personal-web/static/media/image3.aaaf763ffa755f917f93.JPG",
     "static/media/image13.jpg": "/react-personal-web/static/media/image13.08af0d237c9072a705fa.jpg",
     "index.html": "/react-personal-web/index.html",
-    "main.ec16c228.css.map": "/react-personal-web/static/css/main.ec16c228.css.map",
-    "main.5287f16e.js.map": "/react-personal-web/static/js/main.5287f16e.js.map"
+    "main.427de47b.css.map": "/react-personal-web/static/css/main.427de47b.css.map",
+    "main.19de2876.js.map": "/react-personal-web/static/js/main.19de2876.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec16c228.css",
-    "static/js/main.5287f16e.js"
+    "static/css/main.427de47b.css",
+    "static/js/main.19de2876.js"
   ]
 }
