@@ -8,6 +8,7 @@
 }
 
 .Navbar {
+  outline: none;
   pointer-events: none;
   height: 9vh;
   height: calc(var(--vh, 1vh) * 9);

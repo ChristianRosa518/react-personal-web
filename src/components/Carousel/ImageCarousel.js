@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
+
 import "./carousel.css";
 import "../Hero/About.css";
 
@@ -40,6 +41,7 @@ const ImageCarousel = ({ children }) => {
       }
     };
   });
+
   return (
     <div
       {...handlers}

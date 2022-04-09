@@ -3,10 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import "./Title.css";
 import "./About.css";
+import "../Carousel/imageCarousel.css";
+import "./Projects.css";
 
 import Step from "../Steps/Step";
 import ImageCarousel, { CarouselChild } from "../Carousel/ImageCarousel";
-import CarouselContainer, { CarouselTest } from "../Carousel/CarouselTest";
+import CarouselContainer, { CarouselItem } from "../Carousel/Carousel";
+import ProjectContainer from "./Projects";
 
 // Images
 import image1 from "../images/CarouselImages/image1.PNG";
@@ -48,7 +51,7 @@ function Hero() {
   return (
     <div className={"home"}>
       <CarouselContainer>
-        <CarouselTest>
+        <CarouselItem>
           <div className={"titleContainer"}>
             <AnimatePresence>
               {intro && (
@@ -101,8 +104,8 @@ function Hero() {
               </motion.div>
             )}
           </div>
-        </CarouselTest>
-        <CarouselTest>
+        </CarouselItem>
+        <CarouselItem>
           <div className={"slideContainer"}>
             <div className={"aboutContainer"}>
               <div className={"aboutImage"}>
@@ -197,16 +200,63 @@ function Hero() {
                   </CarouselChild>
                 </ImageCarousel>
               </div>
-              <div className={"aboutDescription"}></div>
+              <div className={"description_Container"}>
+                <div className={"description_AboutSection"}>
+                  <h2>Who am I?</h2>
+                  <p>
+                    I'm an Associate level College graduate pursuing a career in
+                    front-end development
+                  </p>
+                </div>
+                <div className={"description_SkillSection"}>
+                  <h3>Languages I know</h3>
+
+                  <div className={"bars_Container"}>
+                    <div className={"percent_Bars"}>
+                      <div className={"description_Skill"}>Html</div>
+                      <div
+                        className={"description_Bar"}
+                        style={{ width: "70%" }}
+                      ></div>
+                      <div className={"description_Percent"}>70%</div>
+                    </div>
+                    <div className={"percent_Bars"}>
+                      <div className={"description_Skill"}>Css</div>
+                      <div
+                        className={"description_Bar"}
+                        style={{ width: "50%" }}
+                      ></div>
+                      <div className={"description_Percent"}>50%</div>
+                    </div>
+                    <div className={"percent_Bars"}>
+                      <div className={"description_Skill"}>JavaScript</div>
+                      <div
+                        className={"description_Bar"}
+                        style={{ width: "40%" }}
+                      ></div>
+
+                      <div className={"description_Percent"}>40%</div>
+                    </div>
+                    <div className={"percent_Bars"}>
+                      <div className={"description_Skill"}>React</div>
+                      <div
+                        className={"description_Bar"}
+                        style={{ width: "20%" }}
+                      ></div>
+                      <div className={"description_Percent"}>20%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </CarouselTest>
-        <CarouselTest>
-          <div className={"slideContainer"}>b</div>
-        </CarouselTest>
-        <CarouselTest>
+        </CarouselItem>
+        <CarouselItem>
+          <ProjectContainer />
+        </CarouselItem>
+        <CarouselItem>
           <div className={"slideContainer"}>c</div>
-        </CarouselTest>
+        </CarouselItem>
       </CarouselContainer>
       {/* <Carous /> */}
       <div className={"absolute"}>

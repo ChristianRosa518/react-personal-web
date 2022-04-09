@@ -11,6 +11,7 @@
   cursor: pointer;
   /* border: 3px solid black; */
   z-index: 5;
+  outline: none;
 }
 
 .burger_icon {
@@ -75,6 +76,7 @@
 }
 
 .logo {
+  outline: none;
   text-shadow: 2px 3px black;
   pointer-events: all;
   font-family: "Shrikhand", cursive;
@@ -100,6 +102,7 @@
 }
 
 .logo:hover {
+  outline: none;
   color: rgba(255, 130, 88, 1);
   transition: 0.4s;
 }

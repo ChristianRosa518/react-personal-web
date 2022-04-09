@@ -1,0 +1,127 @@
+.imageCarousel {
+  position: relative;
+  color: black;
+  pointer-events: all;
+  height: 100%;
+  width: 100%;
+}
+
+.image-carousel-item {
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: black;
+  z-index: 21;
+  vertical-align: top;
+  /* background-color: green; */
+}
+
+.imageIndicators {
+  background-color: beige;
+  border-radius: 40% 40% 0% 0%;
+  width: 50%;
+  pointer-events: all;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageIndicators > button {
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding-top: 8px;
+  padding: 0px 12px;
+  font-size: calc(0.75em + 1vmin);
+  font-family: "Shrikhand", cursive;
+  font-style: normal;
+  border-bottom: 2px solid transparent;
+}
+
+.imageArrows {
+  border: solid rgba(255, 130, 88, 1);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  position: relative;
+  -webkit-transform: rotate(135deg);
+}
+
+.text {
+  font-size: calc(0.75em + 1vmin);
+  font-family: "Shrikhand", cursive;
+  font-style: normal;
+  color: rgba(255, 130, 88, 1);
+}
+
+.imageFill {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.imageContain {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.imageCover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.imageDown {
+  object-position: 0% 0%;
+}
+
+.noOverflow {
+  overflow: hidden;
+}
+
+@media screen and (max-device-width: 700px) {
+  .image-carousel-item {
+    vertical-align: bottom;
+  }
+
+  .imageArrows {
+    border: solid transparent;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+  .imageDown {
+    object-fit: contain;
+    object-position: 0% -40%;
+  }
+
+  .imageIndicators {
+    width: 50%;
+  }
+}
+@media screen and (max-device-width: 400px) {
+  .imageIndicators {
+    width: 70%;
+  }
+}

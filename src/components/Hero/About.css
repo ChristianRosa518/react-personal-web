@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap");
+
 .aboutContainer {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
@@ -9,106 +11,162 @@
 }
 
 .aboutImage {
+  background-color: beige;
+  border: 8px solid beige;
   overflow: hidden;
   pointer-events: all;
-  height: 70%;
-  width: 30%;
+  height: 75%;
+  width: 35%;
 }
-.aboutDescription {
-  height: 70%;
-  width: 30%;
-  background-color: rgba(255, 130, 88, 1);
-}
-
-.imageCarousel {
-  position: relative;
-  color: black;
-  pointer-events: all;
-  height: 100%;
-  width: 100%;
-}
-
-.image-carousel-item {
-  pointer-events: none;
-  display: inline-flex;
+.description_Container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: black;
-  z-index: 21;
-  vertical-align: top;
-  /* background-color: green; */
-}
+  height: 50%;
+  width: 30%;
+  color: white;
+  pointer-events: none;
 
-.imageIndicators {
-  pointer-events: all;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: 22;
+  text-align: center;
+  white-space: normal;
+  font-family: "Shrikhand", cursive;
+  font-style: normal;
+  /*  */
+  pointer-events: none;
+  /*  */
+}
+.description_SkillSection {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  flex-direction: column;
+  height: 60%;
+  width: 100%;
 
-.imageIndicators > button {
-  color: rgba(255, 130, 88, 1);
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding-top: 8px;
-  padding: 0px 12px;
-  font-size: calc(0.75em + 1vmin);
+  text-align: center;
+  white-space: normal;
   font-family: "Shrikhand", cursive;
   font-style: normal;
-  border-bottom: 2px solid transparent;
 }
+.description_AboutSection {
+  text-shadow: 3px 3px 1px black;
 
-.imageArrows {
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 40%;
+  width: 100%;
 
-.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-
-.text {
-  font-size: calc(0.75em + 1vmin);
+  text-align: center;
+  white-space: normal;
   font-family: "Shrikhand", cursive;
   font-style: normal;
-  color: white;
 }
-
-.imageFill {
-  height: 100%;
+.description_Container h2 {
+  font-weight: 400;
+  font-size: calc(0.75em + 2.8vmin);
+  margin-top: 5%;
+  margin-bottom: 6%;
+  height: 20%;
   width: 100%;
-  object-fit: fill;
 }
 
-.imageCover {
-  height: 100%;
+.description_AboutSection p {
+  margin-top: 20%;
+  margin: 0 auto;
+  height: 55%;
+  width: 70%;
+  font-size: calc(0.75em + 0.9vmin);
+}
+.description_Container h3 {
+  text-shadow: 3px 3px 1px black;
+  letter-spacing: 0.5px;
+
+  font-size: calc(0.75em + 2.8vmin);
+  height: 10%;
+  font-weight: 400;
+  margin-bottom: 10%;
+}
+.description_Container ul li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.bars_Container {
   width: 100%;
-  object-fit: cover;
 }
 
-.imageDown {
-  object-position: 0% -20%;
+.percent_Bars {
+  box-shadow: 3px 3px 2px 0px black;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  height: 20px;
+  width: 85%;
+  margin-bottom: 8px;
+  background-color: #eee;
 }
 
-.noOverflow {
-  overflow: hidden;
+.description_Skill {
+  font-size: calc(0.65em + 0.3vmin);
+  z-index: 3;
+  float: left;
+  height: 100%;
+  width: 18%;
+  background-color: rgb(255, 165, 136);
+}
+
+.description_Bar {
+  position: absolute;
+  height: 100%;
+  background-color: rgb(255, 117, 71);
+}
+
+.description_Percent {
+  font-size: calc(0.75em + 0.4vmin);
+  font-weight: 100;
+  color: #666;
+  position: absolute;
+  right: 0px;
+  width: 15%;
+}
+
+@media screen and (max-device-width: 1500px) {
+  .description_Container h3 {
+    margin-top: 5%;
+    height: 10%;
+  }
+}
+@media screen and (max-device-width: 1100px) {
+  .description_Container {
+    width: 45%;
+  }
+  .aboutImage {
+    height: 70%;
+    width: 50%;
+  }
+
+  .description_Container h3 {
+    margin-top: 2%;
+    height: 10%;
+  }
+  .description_Container h2 {
+    margin-top: 5%;
+  }
+
+  .description_Skill {
+    font-size: calc(0.65em + 0.2vmin);
+    width: 30%;
+  }
+  .description_Container p {
+    margin: 0 auto;
+    width: 90%;
+    font-weight: 400;
+    font-size: calc(0.75em + 0.9vmin);
+  }
 }
 
 @media screen and (max-device-width: 700px) {
@@ -125,22 +183,91 @@
 
   .aboutImage {
     height: 40%;
+    width: 90%;
+  }
+  .description_AboutSection {
+    height: 50%;
+  }
+  .description_SkillSection {
+    height: 50%;
+  }
+
+  .description_Container {
+    height: 40%;
+    width: 80%;
+  }
+
+  .description_Container p {
+    margin-top: 0.5%;
+    margin: 0 auto;
+    height: 70%;
+    width: 90%;
+    font-weight: 400;
+    font-size: calc(0.75em + 0.9vmin);
+  }
+  .description_Container h2 {
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
+  .description_Container h3 {
+    margin-top: 2%;
+  }
+
+  .description_Percent {
+    font-size: calc(0.75em + 0.4vmin);
+    right: 10px;
+  }
+  .description_Skill {
+    font-size: calc(0.65em + 0.2vmin);
+    width: 30%;
+  }
+}
+
+@media screen and (max-device-width: 400px) {
+  .description_Container p {
+    margin-top: 0.5%;
+    margin: 0 auto;
+    height: 60%;
+    width: 70%;
+    font-weight: 400;
+    font-size: calc(0.75em + 0.8vmin);
+  }
+}
+
+@media screen and (max-device-height: 700px) {
+  .aboutImage {
+    height: 30%;
     width: 70%;
   }
-
-  .aboutDescription {
-    height: 40%;
-    width: 90%;
-    background-color: rgba(255, 130, 88, 1);
+  .description_AboutSection {
+    height: 50%;
   }
-  .image-carousel-item {
-    vertical-align: bottom;
+  .description_SkillSection {
+    height: 50%;
   }
 
-  .imageArrows {
-    border: solid transparent;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
+  .description_Container h2 {
+    margin-bottom: 3%;
+  }
+  .description_Container h3 {
+    margin-bottom: 6%;
+  }
+  .description_Container p {
+    height: 60%;
+    width: 80%;
+  }
+  .description_Container {
+    height: 45%;
+    width: 95%;
+  }
+  .percent_Bars {
+    box-shadow: 3px 3px 2px 0px black;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    height: 16px;
+    width: 85%;
+    margin-bottom: 5px;
+    background-color: #eee;
   }
 }

@@ -26,6 +26,7 @@
 }
 
 .carousel-item {
+  position: relative;
   pointer-events: none;
   display: inline-flex;
   align-items: center;

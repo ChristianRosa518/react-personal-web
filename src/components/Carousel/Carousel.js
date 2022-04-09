@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import "./carousel.css";
 
-export const CarouselTest = ({ children, width }) => {
+export const CarouselItem = ({ children, width }) => {
   return (
     <div className={"carousel-item"} style={{ width: width }}>
       {children}
