@@ -5,6 +5,7 @@ import "./Projects.css";
 
 import SassyLogo from "../images/logo.png";
 import HtmlPersonalWebLogo from "../images/Bgtest2.jpeg";
+import ReactWeb from "../images/ReactWeb.PNG";
 
 function ProjectContainer() {
   const [AllVisible, setAllVisible] = useState(false);
@@ -88,8 +89,13 @@ function ProjectContainer() {
                 exit={"exit"}
               >
                 <ProjectItem
+                  Description={`The first website I coded to introduce myself to the basics of Html, Java, and Css.`}
+                  SubDescription={
+                    " This website is something I view as an accomplishment and I will redevelop it with react components to finish the large modal problem I created"
+                  }
                   ModalImageStyle={"modal_img_Sassy"}
                   Title={"Sassy's Specialty Sandwiches"}
+                  Subtitle={"Family Sandwich Shop"}
                   Image={SassyLogo}
                   altTag={"Sassy's Specialty Sandwiches"}
                   ImageStyle={"contain"}
@@ -105,9 +111,16 @@ function ProjectContainer() {
                 exit={"exit"}
               >
                 <ProjectItem
+                  Description={
+                    "I tried to develop a personal website with the theme of Roses, I did poorly."
+                  }
+                  SubDescription={
+                    "The idea was to change the color theme as you scrolled, from orange to blue to pink. "
+                  }
                   ModalImageStyle={"modal_img"}
                   ImageStyle={"cover"}
                   Title={"Non-React Personal Web"}
+                  Subtitle={"Yuck."}
                   Image={HtmlPersonalWebLogo}
                   altTag={"Personal Website Image"}
                   className={`projects_item ${HtmlVisible ? "" : "hidden"}`}
@@ -123,10 +136,15 @@ function ProjectContainer() {
                 exit={"exit"}
               >
                 <ProjectItem
+                  Description={
+                    "My First React app, I believe this website is folds more impressive than my previous. "
+                  }
+                  SubDescription={`Comparing these website's shows that my skills developed and that brings me a respectable sense of pride.`}
                   ModalImageStyle={"modal_img"}
                   ImageStyle={"cover"}
-                  Title={"Non-React Personal Web"}
-                  Image={""}
+                  Title={"React Personal Web"}
+                  Subtitle={"You're Currently on This"}
+                  Image={ReactWeb}
                   altTag={"Personal Website Image"}
                   className={`projects_item ${HtmlVisible ? "" : "hidden"}`}
                 ></ProjectItem>
@@ -141,8 +159,13 @@ function ProjectContainer() {
                 exit={"exit"}
               >
                 <ProjectItem
+                  Description={`The first website I coded to introduce myself to the basics of Html, Java, and Css.`}
+                  SubDescription={
+                    " This website is something I view as an accomplishment and I will redevelop it with react components to finish the large modal problem I created"
+                  }
                   ModalImageStyle={"modal_img_Sassy"}
                   Title={"Sassy's Specialty Sandwiches"}
+                  Subtitle={"Family Sandwich Shop"}
                   Image={SassyLogo}
                   altTag={"Sassy's Specialty Sandwiches"}
                   ImageStyle={"contain"}
@@ -159,9 +182,16 @@ function ProjectContainer() {
                 exit={"exit"}
               >
                 <ProjectItem
+                  Description={
+                    "I tried to develop a personal website with the theme of Roses, I did poorly."
+                  }
+                  SubDescription={
+                    "The idea was to change the color theme as you scrolled, from orange to blue to pink. "
+                  }
                   ModalImageStyle={"modal_img"}
                   ImageStyle={"cover"}
                   Title={"Non-React Personal Web"}
+                  Subtitle={"Yuck."}
                   Image={HtmlPersonalWebLogo}
                   altTag={"Personal Website Image"}
                   className={`projects_item ${HtmlVisible ? "" : "hidden"}`}
@@ -177,10 +207,15 @@ function ProjectContainer() {
                 exit={"exit"}
               >
                 <ProjectItem
+                  Description={
+                    "My First React app, I believe this website is folds more impressive than my previous. "
+                  }
+                  SubDescription={`Comparing these website's shows that my skills developed and that brings me a respectable sense of pride.`}
                   ModalImageStyle={"modal_img"}
                   ImageStyle={"cover"}
-                  Title={"Non-React Personal Web"}
-                  Image={""}
+                  Title={"React Personal Web"}
+                  Subtitle={"You're Currently on This"}
+                  Image={ReactWeb}
                   altTag={"Personal Website Image"}
                   className={`projects_item ${HtmlVisible ? "" : "hidden"}`}
                 ></ProjectItem>
@@ -203,10 +238,14 @@ class ProjectItem extends React.Component {
     this.changeModal = this.changeModal.bind(this);
   }
 
-  changeModal() {
-    console.log("hi");
+  changeModal(e) {
     const current = this.state.modals;
     this.setState({ modals: !current });
+  }
+
+  changeModalChildElement(e) {
+    e.stopPropagation();
+    console.log("child");
   }
 
   render() {
@@ -221,16 +260,35 @@ class ProjectItem extends React.Component {
               animate={{ height: "calc(var(--vh, 1vh) * 100)" }}
               transition={{ duration: 0.5 }}
               exit={{ height: "0vh", transition: { duration: 0.5 } }}
-              onClick={() => this.setState({ modals: false })}
+              onClick={this.changeModal}
               className={"modal_Container"}
             >
-              <div className={"modal"}>
+              <div className={"modal"} onClick={this.changeModalChildElement}>
+                <div className={"closeButton"} onClick={this.changeModal}>
+                  ✖
+                </div>
                 <div className={this.props.ModalImageStyle}>
                   <img
                     className={this.props.ImageStyle}
                     src={this.props.Image}
                     alt={this.props.altTag}
                   ></img>
+                  <div>
+                    <h2 className={"modalTitle"}>{this.props.Title}</h2>
+                    <p className={"modalSubTitle"}>{this.props.Subtitle}</p>
+                  </div>
+                  <div>
+                    <p className={"modalDescription"}>
+                      {this.props.Description}
+                    </p>
+                    <p className={"modalDescription modalSub"}>
+                      {this.props.SubDescription}
+                    </p>
+                  </div>
+                  <div className={"modalButtonContainer"}>
+                    <button className={"modalButton"}>Website</button>
+                    <button className={"modalButton"}>Github</button>
+                  </div>
                 </div>
               </div>
             </motion.div>

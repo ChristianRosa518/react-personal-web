@@ -47,7 +47,7 @@
 
   text-align: center;
   white-space: normal;
-  font-family: "Shrikhand", cursive;
+
   font-style: normal;
 }
 .description_AboutSection {
@@ -66,6 +66,7 @@
   font-style: normal;
 }
 .description_Container h2 {
+  font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-size: calc(0.75em + 2.8vmin);
   margin-top: 5%;
@@ -75,6 +76,7 @@
 }
 
 .description_AboutSection p {
+  font-family: "Montserrat", sans-serif;
   margin-top: 20%;
   margin: 0 auto;
   height: 55%;
@@ -100,6 +102,8 @@
 }
 
 .percent_Bars {
+  font-family: "Montserrat", sans-serif;
+
   box-shadow: 3px 3px 2px 0px black;
   position: relative;
   display: flex;
@@ -138,6 +142,9 @@
   .description_Container h3 {
     margin-top: 5%;
     height: 10%;
+  }
+  .description_Container {
+    width: 45%;
   }
 }
 @media screen and (max-device-width: 1100px) {

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
 .slideContainer {
   box-sizing: border-box;
   position: absolute;
@@ -41,8 +43,8 @@
   background-color: transparent;
   font-family: "Shrikhand", cursive;
   font-style: normal;
-  font-size: calc(0.75em + 2vmin);
-  pointer-events: all;
+  font-size: calc(0.75em + 1.5vmin);
+  pointer-events: auto;
   color: white;
   cursor: pointer;
   font-weight: 400;
@@ -66,7 +68,7 @@
 
 .projects_item {
   overflow: hidden;
-  pointer-events: fill;
+  pointer-events: auto;
   position: relative;
   height: 350px;
   width: 350px;
@@ -108,7 +110,7 @@
 
 .projects_item_Button {
   cursor: pointer;
-  pointer-events: all;
+  pointer-events: auto;
 
   width: 40%;
   height: 14%;
@@ -117,7 +119,8 @@
 
   font-size: calc(0.45em + 0.5vmin);
   font-weight: 400;
-  font-family: "Shrikhand", cursive;
+
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   transition: 0.2s;
 }
@@ -156,7 +159,7 @@
 /* MODALS */
 
 .modal_Container {
-  pointer-events: all;
+  pointer-events: fill;
   position: fixed;
   top: 0;
   left: 200%;
@@ -172,27 +175,107 @@
 }
 
 .modal {
+  position: relative;
   height: 80%;
   width: 30%;
   background-color: beige;
   border-radius: 5%;
   overflow: hidden;
+  transition: all 0.3s;
+}
+
+.closeButton {
+  pointer-events: all;
+  color: rgba(255, 130, 88, 1);
+  transition: 0.3s;
+  cursor: pointer;
+  position: absolute;
+  bottom: 4px;
+  right: 4%;
+  font-size: 2em;
+}
+.closeButton:hover {
+  transition: 0.3s;
+  color: black;
 }
 
 .modal_img {
   height: 30%;
   width: 100%;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid rgba(255, 130, 88, 1);
 }
 
 .modal_img_Sassy {
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid rgba(255, 130, 88, 1);
 
   background-color: #4f535c;
   height: 30%;
   width: 100%;
 }
 
+.modalTitle {
+  white-space: initial;
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 3%;
+  color: rgba(255, 130, 88, 1);
+  font-size: calc(0.45em + 2vmin);
+  font-weight: 400;
+  font-family: "Shrikhand", cursive;
+}
+.modalSubTitle {
+  white-space: initial;
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 0%;
+  padding-bottom: 2%;
+  color: rgb(126, 126, 126);
+  font-size: calc(0.45em + 1.3vmin);
+  font-family: "Montserrat", sans-serif;
+
+  border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.modalDescription {
+  padding-top: 3%;
+  white-space: initial;
+  margin: 0 auto;
+  width: 90%;
+  color: rgb(126, 126, 126);
+  font-size: calc(0.45em + 1.3vmin);
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.modalButtonContainer {
+  position: absolute;
+  height: 9%;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  bottom: 8%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modalButton {
+  cursor: pointer;
+  height: 80%;
+  width: 30%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 130, 88, 1);
+  transition: all 0.2s;
+  font-family: "Montserrat", sans-serif;
+}
+.modalButton:hover {
+  color: white;
+  transition: all 0.2s;
+  background-color: rgba(255, 130, 88, 1);
+}
 /* END MODALS */
 
 @media screen and (max-device-width: 1500px) {
@@ -201,12 +284,19 @@
     width: 300px;
     background-color: #4f535c;
   }
+  .modal {
+    width: 50%;
+  }
 }
 @media screen and (max-device-width: 1100px) {
   .projects_item {
     height: 250px;
     width: 250px;
     background-color: #4f535c;
+  }
+
+  .modal {
+    width: 50%;
   }
 }
 @media screen and (max-device-width: 820px) {
@@ -229,6 +319,11 @@
     font-size: calc(0.75em + 0.8vmin);
   }
 }
+@media screen and (max-device-width: 700px) {
+  .modal {
+    width: 70%;
+  }
+}
 
 @media screen and (max-device-width: 400px) {
   .projects_Html {
@@ -240,6 +335,19 @@
     height: 175px;
     width: 250px;
     background-color: #4f535c;
+  }
+  .projects_Nav {
+    position: absolute;
+    top: 8%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    height: 15%;
+    width: 80%;
+    /* background-color: red; */
   }
 }
 @media screen and (max-device-width: 300px) {
@@ -257,6 +365,15 @@
   }
 }
 
+@media screen and (max-device-height: 900px) and (max-device-width: 600px) {
+  .modalDescription {
+    width: 80%;
+    font-size: calc(0.45em + 1.8vmin);
+    font-family: "Montserrat", sans-serif;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
 @media screen and (max-device-height: 950px) and (max-device-width: 500px) {
   .projects_item {
     height: 135px;
