@@ -39,7 +39,7 @@
 }
 
 .indicators {
-  pointer-events: all;
+  pointer-events: none;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -53,12 +53,13 @@
 }
 
 .indicators > button {
+  pointer-events: all;
   color: white;
   cursor: pointer;
   background: none;
   border: none;
   padding-top: 8px;
-  padding: 0px 12px;
+  margin: 0px 12px;
   font-size: calc(0.75em + 2vmin);
   font-family: "Shrikhand", cursive;
   font-style: normal;
@@ -67,17 +68,34 @@
 }
 
 @media screen and (max-device-width: 700px) {
+  .indicators {
+    pointer-events: none;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 22;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .indicators > button {
     color: white;
     cursor: pointer;
     background: none;
     border: none;
-    padding: 0px 5px;
-    font-size: calc(0.75em + 1.5vmin);
+    font-size: calc(0.75em + 1.2vmin);
+    padding: 0;
+    margin: 0;
   }
 
-  .arrows {
-    display: none;
+  .indicators > button:nth-child(1) {
+    margin-left: 14px;
+  }
+  .indicators > button:nth-child(4) {
+    margin-right: 14px;
   }
 }
 

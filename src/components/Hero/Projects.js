@@ -69,13 +69,13 @@ function ProjectContainer() {
             className={`${1 === headerIndex ? "button_active" : ""}`}
             onClick={flipHtml}
           >
-            Html Projects
+            Html
           </button>
           <button
             className={`${2 === headerIndex ? "button_active" : ""}`}
             onClick={flipReact}
           >
-            React Projects
+            React-Js
           </button>
         </div>
         <div className={"projects_Html"}>
@@ -99,6 +99,12 @@ function ProjectContainer() {
                   Image={SassyLogo}
                   altTag={"Sassy's Specialty Sandwiches"}
                   ImageStyle={"contain"}
+                  Link={
+                    "https://christianrosa518.github.io/Sassy-s-Specialty-Sandwiches/"
+                  }
+                  GithubLink={
+                    "https://github.com/ChristianRosa518/Sassy-s-Specialty-Sandwiches"
+                  }
                 ></ProjectItem>
               </motion.div>
             )}
@@ -124,6 +130,8 @@ function ProjectContainer() {
                   Image={HtmlPersonalWebLogo}
                   altTag={"Personal Website Image"}
                   className={`projects_item ${HtmlVisible ? "" : "hidden"}`}
+                  Link={"https://christianrosa518.github.io/pWebsite/"}
+                  GithubLink={"https://github.com/ChristianRosa518/pWebsite"}
                 ></ProjectItem>
               </motion.div>
             )}
@@ -147,6 +155,10 @@ function ProjectContainer() {
                   Image={ReactWeb}
                   altTag={"Personal Website Image"}
                   className={`projects_item ${HtmlVisible ? "" : "hidden"}`}
+                  Link={""}
+                  GithubLink={
+                    "https://github.com/ChristianRosa518/react-personal-web"
+                  }
                 ></ProjectItem>
               </motion.div>
             )}
@@ -170,6 +182,12 @@ function ProjectContainer() {
                   altTag={"Sassy's Specialty Sandwiches"}
                   ImageStyle={"contain"}
                   Sassy={true}
+                  Link={
+                    "https://christianrosa518.github.io/Sassy-s-Specialty-Sandwiches/"
+                  }
+                  GithubLink={
+                    "https://github.com/ChristianRosa518/Sassy-s-Specialty-Sandwiches"
+                  }
                 ></ProjectItem>
               </motion.div>
             )}
@@ -194,6 +212,8 @@ function ProjectContainer() {
                   Subtitle={"Yuck."}
                   Image={HtmlPersonalWebLogo}
                   altTag={"Personal Website Image"}
+                  Link={"https://christianrosa518.github.io/pWebsite/"}
+                  GithubLink={"https://github.com/ChristianRosa518/pWebsite"}
                   className={`projects_item ${HtmlVisible ? "" : "hidden"}`}
                 ></ProjectItem>
               </motion.div>
@@ -217,6 +237,10 @@ function ProjectContainer() {
                   Subtitle={"You're Currently on This"}
                   Image={ReactWeb}
                   altTag={"Personal Website Image"}
+                  Link={""}
+                  GithubLink={
+                    "https://github.com/ChristianRosa518/react-personal-web"
+                  }
                   className={`projects_item ${HtmlVisible ? "" : "hidden"}`}
                 ></ProjectItem>
               </motion.div>
@@ -286,8 +310,22 @@ class ProjectItem extends React.Component {
                     </p>
                   </div>
                   <div className={"modalButtonContainer"}>
-                    <button className={"modalButton"}>Website</button>
-                    <button className={"modalButton"}>Github</button>
+                    <a
+                      href={this.props.Link}
+                      className={"modalButton"}
+                      target={"_blank"}
+                      rel={"noreferrer"}
+                    >
+                      Website
+                    </a>
+                    <a
+                      href={this.props.GithubLink}
+                      className={"modalButton"}
+                      target={"_blank"}
+                      rel={"noreferrer"}
+                    >
+                      Github
+                    </a>
                   </div>
                 </div>
               </div>

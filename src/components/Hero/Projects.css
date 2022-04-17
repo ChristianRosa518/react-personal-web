@@ -44,11 +44,12 @@
   font-family: "Shrikhand", cursive;
   font-style: normal;
   font-size: calc(0.75em + 1.5vmin);
+  margin-left: 12px;
+  margin-right: 12px;
   pointer-events: auto;
   color: white;
   cursor: pointer;
   font-weight: 400;
-  padding: 10px;
   transition: 0.3s;
   text-shadow: 3px 3px 1px black;
 }
@@ -263,9 +264,11 @@
   margin-right: auto;
 }
 .modalButton {
+  font-size: calc(0.45em + 1.1vmin);
+  text-align: center;
+  color: rgba(255, 130, 88, 1);
   cursor: pointer;
-  height: 80%;
-  width: 30%;
+  padding: 18px;
   background-color: transparent;
   border: 1px solid rgba(255, 130, 88, 1);
   transition: all 0.2s;

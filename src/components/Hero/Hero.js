@@ -6,10 +6,11 @@ import "./About.css";
 import "../Carousel/imageCarousel.css";
 import "./Projects.css";
 
-import Step from "../Steps/Step";
+import { StepContainer } from "../Steps/Step";
 import ImageCarousel, { CarouselChild } from "../Carousel/ImageCarousel";
 import CarouselContainer, { CarouselItem } from "../Carousel/Carousel";
 import ProjectContainer from "./Projects";
+import ContactForm from "../Contact/Contact";
 
 // Images
 import image1 from "../images/CarouselImages/image1.PNG";
@@ -100,7 +101,7 @@ function Hero() {
                 className={"titlebot"}
                 exit={{ x: "-20%", opacity: 0 }}
               >
-                and i'm an aspiring Front-end Developer
+                and I'm an aspiring Front-end Developer
               </motion.div>
             )}
           </div>
@@ -255,22 +256,13 @@ function Hero() {
           <ProjectContainer />
         </CarouselItem>
         <CarouselItem>
-          <div className={"slideContainer"}>c</div>
+          <div className={"slideContainer"}>
+            <ContactForm />
+          </div>
         </CarouselItem>
       </CarouselContainer>
-      {/* <Carous /> */}
-      <div className={"absolute"}>
-        <Step />
-        <Step />
-        <Step />
-        <Step />
-        <Step />
-        <Step />
-        <Step />
-        <Step />
-        <Step />
-        {/* Nine as default */}
-      </div>
+      {/*  */}
+      <StepContainer />
     </div>
   );
 }

@@ -128,3 +128,58 @@
   background-color: purple;
   transition: background-color 0.1s;
 }
+
+.stepChanger {
+  pointer-events: none;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(var(--vh, 1vh) * 9);
+  width: 10vw;
+  /* background-color: white; */
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stepChanger button {
+  cursor: pointer;
+  pointer-events: all;
+  margin: 4px;
+  padding: 8px;
+
+  font-size: calc(0.45em + 3vmin);
+  font-weight: 400;
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  background-color: transparent;
+  border: transparent;
+  color: #4e4e4e;
+  transition: 0.2s;
+}
+
+.stepChanger button:hover {
+  transition: 0.2s;
+  color: rgba(255, 130, 88, 1);
+}
+
+.stepChanger div {
+  pointer-events: all;
+  color: #4e4e4e;
+  font-size: calc(0.75em + 1vmin);
+  font-family: "Shrikhand", cursive;
+  transition: 0.2s;
+}
+.stepChanger div:hover {
+  transition: 0.2s;
+  color: rgba(255, 130, 88, 1);
+}
+
+@media screen and (max-device-width: 800px) {
+  .stepChanger {
+    display: none;
+  }
+}

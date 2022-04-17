@@ -43,14 +43,6 @@ const CarouselContainer = ({ children }) => {
       </div>
       <div className={"indicators"}>
         <button
-          className="arrows flip"
-          onClick={() => {
-            updateIndex(activeIndex - 1);
-          }}
-        >
-          &#x2794;
-        </button>
-        <button
           className={`${0 === activeIndex ? "active" : ""}`}
           onClick={() => {
             updateIndex(0);
@@ -81,15 +73,6 @@ const CarouselContainer = ({ children }) => {
           }}
         >
           Contact
-        </button>
-
-        <button
-          className="arrows"
-          onClick={() => {
-            updateIndex(activeIndex + 1);
-          }}
-        >
-          &#x2794;
         </button>
       </div>
     </div>

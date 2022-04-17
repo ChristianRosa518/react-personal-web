@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Nav/Navbar";
 import Hero from "./components/Hero/Hero";
 import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   function appHeight() {
@@ -17,10 +18,10 @@ function App() {
   });
 
   return (
-    <div>
-      <Navbar />
+    <Router>
       <Hero />
-    </div>
+      <Navbar />
+    </Router>
   );
 }
 

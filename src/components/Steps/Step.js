@@ -2,6 +2,60 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Steps.css";
 
+export class StepContainer extends React.Component {
+  state = {
+    numSteps: 9,
+  };
+
+  render() {
+    const children = [];
+
+    for (var i = 0; i < this.state.numSteps; i += 1) {
+      children.push(<Step key={i} number={i} />);
+    }
+
+    return (
+      <StepChanger
+        addChild={this.onAddChild}
+        removeChild={this.onRemoveChild}
+        count={this.state.numSteps}
+      >
+        {children}
+      </StepChanger>
+    );
+  }
+
+  onAddChild = () => {
+    if (this.state.numSteps === 35) {
+      console.log("no more pls");
+    } else {
+      this.setState({
+        numSteps: this.state.numSteps + 1,
+      });
+    }
+  };
+  onRemoveChild = () => {
+    if (this.state.numSteps <= 9) {
+      console.log("no more steps");
+    } else {
+      this.setState({
+        numSteps: this.state.numSteps - 1,
+      });
+    }
+  };
+}
+
+const StepChanger = (props) => (
+  <div>
+    <div className="stepChanger">
+      <button onClick={props.removeChild}>-</button>
+      <div>{props.count}</div>
+      <button onClick={props.addChild}>+</button>
+    </div>
+    <div className="absolute">{props.children}</div>
+  </div>
+);
+
 export default class Step extends React.Component {
   constructor(props) {
     super(props);

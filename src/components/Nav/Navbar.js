@@ -4,24 +4,12 @@ import "./Burger.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-function Navbar() {
+function Navbar(props) {
   const [open, setOpen] = useState(false);
   const [color, setColor] = useState(false);
   const [navColor, setNavColor] = useState(false);
   const animateFrom = { opacity: 0, y: -40 };
   const animateTo = { opacity: 1, y: 0 };
-
-  // If website was vertical
-  window.addEventListener("scroll", () => {
-    var current = document.documentElement.scrollTop;
-    var maxHeight = document.body.scrollHeight;
-    if (current > maxHeight * 0.05) {
-      setNavColor(false);
-      // Set true
-    } else {
-      setNavColor(false);
-    }
-  });
 
   //
   function appHeight() {
@@ -76,8 +64,12 @@ function Navbar() {
               transition={{ delay: 0.15 }}
               exit={{ opacity: 0, y: -40, transition: { delay: 0 } }}
             >
-              <a href="home" className={"navItem"} id="homeAnchor">
-                Home
+              <a
+                href="https://drive.google.com/file/d/1TMn9VaOsNo1sVSgdV7r8RPhH-ripOoMI/view?usp=sharing"
+                target={"_blank"}
+                rel={"noreferrer"}
+              >
+                Resume
               </a>
             </motion.li>
             <motion.li
@@ -87,7 +79,13 @@ function Navbar() {
               transition={{ delay: 0.2 }}
               exit={{ opacity: 0, y: -40, transition: { delay: 0 } }}
             >
-              <a href="#about">About</a>
+              <a
+                href="https://github.com/ChristianRosa518"
+                target={"_blank"}
+                rel={"noreferrer"}
+              >
+                Github
+              </a>
             </motion.li>
             <motion.li
               key={"List3"}
@@ -96,19 +94,12 @@ function Navbar() {
               transition={{ delay: 0.25 }}
               exit={{ opacity: 0, y: -40, transition: { delay: 0 } }}
             >
-              <a href="#projects" className={"navItem"}>
-                Projects
-              </a>
-            </motion.li>
-            <motion.li
-              key={"List4"}
-              initial={animateFrom}
-              animate={animateTo}
-              transition={{ delay: 0.3 }}
-              exit={{ opacity: 0, y: -40, transition: { delay: 0 } }}
-            >
-              <a href="#home" className={"navItem"}>
-                Contact
+              <a
+                href="https://www.instagram.com/chedic_/"
+                target={"_blank"}
+                rel={"noreferrer"}
+              >
+                Instagram
               </a>
             </motion.li>
           </motion.ul>
