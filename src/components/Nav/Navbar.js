@@ -65,7 +65,7 @@ function Navbar(props) {
               exit={{ opacity: 0, y: -40, transition: { delay: 0 } }}
             >
               <a
-                href="https://drive.google.com/file/d/1TMn9VaOsNo1sVSgdV7r8RPhH-ripOoMI/view?usp=sharing"
+                href="https://drive.google.com/file/d/1lB19CCs00T9ein0qpW7XAPMvEe0lq2ql/view?usp=sharing"
                 target={"_blank"}
                 rel={"noreferrer"}
               >

@@ -168,7 +168,7 @@
   height: calc(var(--vh, 1vh) * 100);
   width: 100%;
   background-color: rgba(0, 0, 0, 0.541);
-  z-index: 30;
+  z-index: 300000;
 
   display: flex;
   justify-content: center;

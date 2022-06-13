@@ -7,24 +7,6 @@ export class StepContainer extends React.Component {
     numSteps: 9,
   };
 
-  render() {
-    const children = [];
-
-    for (var i = 0; i < this.state.numSteps; i += 1) {
-      children.push(<Step key={i} number={i} />);
-    }
-
-    return (
-      <StepChanger
-        addChild={this.onAddChild}
-        removeChild={this.onRemoveChild}
-        count={this.state.numSteps}
-      >
-        {children}
-      </StepChanger>
-    );
-  }
-
   onAddChild = () => {
     if (this.state.numSteps === 35) {
       console.log("no more pls");
@@ -43,6 +25,24 @@ export class StepContainer extends React.Component {
       });
     }
   };
+
+  render() {
+    const children = [];
+
+    for (var i = 0; i < this.state.numSteps; i += 1) {
+      children.push(<Step key={i} number={i} />);
+    }
+
+    return (
+      <StepChanger
+        addChild={this.onAddChild}
+        removeChild={this.onRemoveChild}
+        count={this.state.numSteps}
+      >
+        {children}
+      </StepChanger>
+    );
+  }
 }
 
 const StepChanger = (props) => (
