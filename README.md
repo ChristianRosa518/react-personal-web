@@ -1,3 +1,1 @@
-Personal website to display my value as a developer.
-
-I initially saw a photo on instagram
+Second personal website, this one is a horizontal theme with most of the containers being click-through/see-through. I also don't like this one because of the constriction on space. Will redevelop it into a third site.
